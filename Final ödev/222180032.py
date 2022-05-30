@@ -1,3 +1,11 @@
+# -----------------------------------------------------------------------------------------------------------------------------------
+#                                BİLGİSAYARDA PROGRAMLAMA FİNAL PROJESİ --- BASİT QUİZ PROGRAMI
+# -----------------------------------------------------------------------------------------------------------------------------------
+#                      Mustafacan Beyhan - 222180032 - github.com/mbyhn1
+#  GRUP ÜYELERİ:       Muhammet Ali Yılmaz - 222180028 - github.com/Muhammetali16
+#                      Yusuf Cenk - 222180059 - github.com/yycenk
+# -----------------------------------------------------------------------------------------------------------------------------------
+
 import time
 import sys                                      # PROGRAMDA KULLANILAN MODÜLLERİN TANITILDIĞI SATIRLAR
 from pygame import mixer
@@ -32,7 +40,7 @@ def yeni_oyun():                                 # OYUNU BAŞLATMAK İÇİN GERE
             
             print(i)
            
-######################
+# -----------------------------------------------------------------------------------------------------------------------------------
 
         tahmin = input("Enter (A, B, C, D): ")
         tahmin = tahmin.upper()
@@ -42,7 +50,7 @@ def yeni_oyun():                                 # OYUNU BAŞLATMAK İÇİN GERE
 
     display_score(dogru_tahminler, tahminler)
         
-# -------------------------
+# -----------------------------------------------------------------------------------------------------------------------------------
 def cevap_kontrol(cevap, tahmin):                    # CEVAPLARI KONTROL ETMEK İÇİN GEREKLİ OLAN FONKSİYON
         
     if cevap == tahmin:
@@ -52,7 +60,7 @@ def cevap_kontrol(cevap, tahmin):                    # CEVAPLARI KONTROL ETMEK �
         print("YANLIŞ CEVAP!")                       # CEVAP SÖZLÜKTE BELİRTİLEN ŞIKLA AYNI DEĞİL İSE EKRANA YANLIŞ YAZDIR
         return 0
     
-# -------------------------
+# -----------------------------------------------------------------------------------------------------------------------------------
 def display_score(dogru_tahminler, tahminler):              # PUANI GÖSTERMEK İÇİN GEREKLİ OLAN FONKSİYON
 
     
@@ -75,7 +83,7 @@ def display_score(dogru_tahminler, tahminler):              # PUANI GÖSTERMEK �
     
     
 
-# -------------------------
+# -----------------------------------------------------------------------------------------------------------------------------------
 def tekrar_oyna():                 # OYUNA TEKRAR BAŞLAMAK İÇİN GEREKLİ OLAN FONKSİYON
 
     response = input("Tekrar oynamak ister misin? (evet veya hayır): ")
@@ -85,7 +93,7 @@ def tekrar_oyna():                 # OYUNA TEKRAR BAŞLAMAK İÇİN GEREKLİ OLA
         return True                     # KULLANICININ CEVABI EVET İSE PROGRAM BAŞA DÖNER HAYIR İSE PROGRAM SONLANIR
     else:
         return False
-# -------------------------
+# -----------------------------------------------------------------------------------------------------------------------------------
 
 # SORULARIN VE DOĞRU CEVAPLARIN BULUNDUĞU SÖZLÜK
 sorular = {
@@ -106,7 +114,7 @@ sorular = {
  "15- Özellikle yeni çıkmış bilgisayar oyunlarını oynarken bilgisayarın hızını etkileyen donanım birimi hangisidir?: ": "B"
 }
 
-
+# -----------------------------------------------------------------------------------------------------------------------------------
 
 # CEVAPLARIN BULUNDUĞU SÖZLÜK
 cevaplar =[["A. Tarayıcı", "B. Web kamerası", "C. Yazıcı", "D. Ekran"],
@@ -124,6 +132,8 @@ cevaplar =[["A. Tarayıcı", "B. Web kamerası", "C. Yazıcı", "D. Ekran"],
           ["A. Internet Explorer","B. Macromedia Fireworks", "C. Opera", "D. Yandex Browser"],
           ["A. Tarayıcı","B. Aktarıcı", "C. Yazıcı", "D. Oyun konsolu"],
           ["A. Ana Kart","B. Ekran Kartı", "C. Sabit Disk", "D. Ağ Kartı"]]
+
+# -----------------------------------------------------------------------------------------------------------------------------------
 
 yeni_oyun()
 
