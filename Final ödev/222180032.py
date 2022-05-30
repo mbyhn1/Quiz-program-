@@ -1,21 +1,21 @@
 import time
-import sys
+import sys                                      # PROGRAMDA KULLANILAN MODÜLLERİN TANITILDIĞI SATIRLAR
 from pygame import mixer
 
 mixer.init()
-mixer.music.load("muzik.mp3")
-mixer.music.set_volume(0.03)
-mixer.music.play()
+mixer.music.load("muzik.mp3")                     # MÜZİĞİ TANITMAYA YARAYAN KOD
+mixer.music.set_volume(0.03)                      # MÜZİK SES AYARI
+mixer.music.play()                                # PROGRAM BAŞLATILDIĞI ZAMAN MÜZİĞİ BAŞLATACAK KOD
 
 
 print("OYUN BAŞLIYOR, HAZIRLANIN!")
 
 for i in range(3,0,-1):
-    time.sleep (1)
+    time.sleep (1)                               # OYUN BAŞLAMADAN ÖNCE 3 SANİYE SÜRECEK KISA BİR GERİ SAYIM
     sys.stdout.write(str(i)+' ')
     sys.stdout.flush()
 
-def yeni_oyun():
+def yeni_oyun():                                 # OYUNU BAŞLATMAK İÇİN GEREKLİ OLAN FONKSİYON 
 
     tahminler = []
     dogru_tahminler = 0
@@ -23,7 +23,7 @@ def yeni_oyun():
 
     for key in sorular:
         
-        time.sleep(0.5)
+        time.sleep(0.5)                          # SORULAR ARASINDA YARIM SANİYE GECİKME 
         
         print("-------------------------")
         print(key)
@@ -39,21 +39,21 @@ def yeni_oyun():
         tahminler.append(tahmin)         
         dogru_tahminler += cevap_kontrol(sorular.get(key), tahmin)
         soru_numarasi += 1  
-    
+
     display_score(dogru_tahminler, tahminler)
         
 # -------------------------
-def cevap_kontrol(cevap, tahmin):
+def cevap_kontrol(cevap, tahmin):                    # CEVAPLARI KONTROL ETMEK İÇİN GEREKLİ OLAN FONKSİYON
         
     if cevap == tahmin:
-        print("DOĞRU CEVAP!")
+        print("DOĞRU CEVAP!")                        # CEVAP SÖZLÜKTE BELİRTİLEN ŞIKLA AYNI İSE EKRANA DOĞRU YAZDIR
         return 1
     else:
-        print("YANLIŞ CEVAP!")
+        print("YANLIŞ CEVAP!")                       # CEVAP SÖZLÜKTE BELİRTİLEN ŞIKLA AYNI DEĞİL İSE EKRANA YANLIŞ YAZDIR
         return 0
     
 # -------------------------
-def display_score(dogru_tahminler, tahminler):
+def display_score(dogru_tahminler, tahminler):              # PUANI GÖSTERMEK İÇİN GEREKLİ OLAN FONKSİYON
 
     
     print("-------------------------")
@@ -76,20 +76,20 @@ def display_score(dogru_tahminler, tahminler):
     
 
 # -------------------------
-def tekrar_oyna():
+def tekrar_oyna():                 # OYUNA TEKRAR BAŞLAMAK İÇİN GEREKLİ OLAN FONKSİYON
 
     response = input("Tekrar oynamak ister misin? (evet veya hayır): ")
-    response = response.upper()
+    response = response.upper()          # CEVAPTA KÜÇÜK YA DA BÜYÜK HARF AYRIMI OLMAMASI İÇİN
 
-    if response == "EVET":
-        return True
+    if response == "EVET":               
+        return True                     # KULLANICININ CEVABI EVET İSE PROGRAM BAŞA DÖNER HAYIR İSE PROGRAM SONLANIR
     else:
         return False
 # -------------------------
 
-
+# SORULARIN VE DOĞRU CEVAPLARIN BULUNDUĞU SÖZLÜK
 sorular = {
- "1- İnternet üzerinden görüntülü konuşma amacıyla kullanılan bilgisayar donanımı aşağıdakilerden hangisidir?: ": "B",
+ "1- İnternet üzerinden görüntülü konuşma amacıyla kullanılan bilgisayar donanımı aşağıdakilerden hangisidir?: ": "B", 
  "2- Bilgisayarın elle tutulabilen ve gözle görülebilen kısımlarına ne ad verilir?: ": "A",
  "3- Aşağıdaki yazılımlardan hangisi sistem yazılımıdır?: ": "D",
  "4- Bilgisayardaki tüm işlemlerin yapıldığı dahili donanım birimi hangisidir?: ": "C",
@@ -108,6 +108,7 @@ sorular = {
 
 
 
+# CEVAPLARIN BULUNDUĞU SÖZLÜK
 cevaplar =[["A. Tarayıcı", "B. Web kamerası", "C. Yazıcı", "D. Ekran"],
           ["A. Donanım", "B. Sistem yazılımı", "C. Uygulama yazılımı", "D. Donatım"],
           ["A. Google Chrome", "B. Paint", "C. Avira Antivirüs", "D. Windows 10"],
