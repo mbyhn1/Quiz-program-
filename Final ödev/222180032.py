@@ -16,7 +16,7 @@ mixer.music.set_volume(0.03)                      # MÜZİK SES AYARI
 mixer.music.play()                                # PROGRAM BAŞLATILDIĞI ZAMAN MÜZİĞİ BAŞLATACAK KOD
 
 
-print("OYUN BAŞLIYOR, HAZIRLANIN!")
+print("SORULAR GELİYOR, HAZIRLAN!")
 
 for i in range(3,0,-1):
     time.sleep (1)                               # OYUN BAŞLAMADAN ÖNCE 3 SANİYE SÜRECEK KISA BİR GERİ SAYIM
