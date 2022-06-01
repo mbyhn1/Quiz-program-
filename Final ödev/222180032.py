@@ -42,8 +42,8 @@ def yeni_oyun():                                 # OYUNU BAŞLATMAK İÇİN GERE
            
 # -----------------------------------------------------------------------------------------------------------------------------------
 
-        tahmin = input("Enter (A, B, C, D): ")
-        tahmin = tahmin.upper()
+        tahmin = input("Enter (A, B, C, D): ")                     # ŞIK GİRMEK İÇİN INPUT
+        tahmin = tahmin.upper()                                    # ŞIKTA KÜÇÜK YA DA BÜYÜK HARF AYRIMI OLMAMASI İÇİN
         tahminler.append(tahmin)         
         dogru_tahminler += cevap_kontrol(sorular.get(key), tahmin)
         soru_numarasi += 1  
@@ -61,7 +61,7 @@ def cevap_kontrol(cevap, tahmin):                    # CEVAPLARI KONTROL ETMEK �
         return 0
     
 # -----------------------------------------------------------------------------------------------------------------------------------
-def display_score(dogru_tahminler, tahminler):              # PUANI GÖSTERMEK İÇİN GEREKLİ OLAN FONKSİYON
+def display_score(dogru_tahminler, tahminler):              # OYUN SONUNDA SKORU GÖSTERMEK İÇİN GEREKLİ OLAN FONKSİYON
 
     
     print("-------------------------")
@@ -84,13 +84,13 @@ def display_score(dogru_tahminler, tahminler):              # PUANI GÖSTERMEK �
     
 
 # -----------------------------------------------------------------------------------------------------------------------------------
-def tekrar_oyna():                 # OYUNA TEKRAR BAŞLAMAK İÇİN GEREKLİ OLAN FONKSİYON
+def tekrar_oyna():                                   # OYUNA TEKRAR BAŞLAMAK İÇİN GEREKLİ OLAN FONKSİYON
 
     response = input("Tekrar oynamak ister misin? (evet veya hayır): ")
-    response = response.upper()          # CEVAPTA KÜÇÜK YA DA BÜYÜK HARF AYRIMI OLMAMASI İÇİN
+    response = response.upper()                      # CEVAPTA KÜÇÜK YA DA BÜYÜK HARF AYRIMI OLMAMASI İÇİN
 
     if response == "EVET":               
-        return True                     # KULLANICININ CEVABI EVET İSE PROGRAM BAŞA DÖNER HAYIR İSE PROGRAM SONLANIR
+        return True                                  # KULLANICININ CEVABI EVET İSE PROGRAM BAŞA DÖNER HAYIR İSE PROGRAM SONLANIR
     else:
         return False
 # -----------------------------------------------------------------------------------------------------------------------------------
