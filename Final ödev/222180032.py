@@ -4,6 +4,8 @@
 #                      Mustafacan Beyhan - 222180032 - github.com/mbyhn1
 #  GRUP ÜYELERİ:       Muhammet Ali Yılmaz - 222180028 - github.com/Muhammetali16
 #                      Yusuf Cenk - 222180059 - github.com/yycenk
+#
+#  Kullanılan awesome python kütüphanesi: mixer
 # -----------------------------------------------------------------------------------------------------------------------------------
 
 import time
